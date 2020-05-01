@@ -28,7 +28,16 @@ SECRET_KEY = '0rpl@d5$q#g&-*n8y)8vs*l_s1@okki=&+=j@e17w3p@$3*mgj'
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://kika-django-todo.herokuapp.com/',
-                'https://8000-e3063a1f-31d3-41e9-b494-d2fedb31d579.ws-eu01.gitpod.io/']
+                'https://8000-e3063a1f-31d3-41e9-b494-d2fedb31d579.ws-eu01.gitpod.io/',
+                'localhost',
+                'http://localhost:8000/',
+                '/workspace/django_toto',
+                '/home/gitpod/.pyenv/versions/3.8.2/lib/python38.zip',
+                '/home/gitpod/.pyenv/versions/3.8.2/lib/python3.8',
+                '/home/gitpod/.pyenv/versions/3.8.2/lib/python3.8/lib-dynload',
+                '/workspace/.pip-modules/lib/python3.8/site-packages',
+                '/home/gitpod/.pyenv/versions/3.8.2/lib/python3.8/site-packages'
+                ]
 
 
 # Application definition
