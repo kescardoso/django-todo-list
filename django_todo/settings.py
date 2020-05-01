@@ -22,16 +22,23 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0rpl@d5$q#g&-*n8y)8vs*l_s1@okki=&+=j@e17w3p@$3*mgj'
+SECRET_KEY = os.environ.get('SECRET_KEY','0rpl@d5$q#g&-*n8y)8vs*l_s1@okki=&+=j@e17w3p@$3*mgj')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://kika-django-todo.herokuapp.com/',
-                'kika-django-todo.herokuapp.com',
-                'https://8000-e3063a1f-31d3-41e9-b494-d2fedb31d579.ws-eu01.gitpod.io/',
-                'http://localhost:8000/',
+# ALLOWED_HOSTS = ['https://kika-django-todo.herokuapp.com/',
+#                 'kika-django-todo.herokuapp.com',
+#                 'https://8000-e3063a1f-31d3-41e9-b494-d2fedb31d579.ws-eu01.gitpod.io/',
+#                 'http://localhost:8000/',
+#                 'localhost']
+
+ALLOWED_HOSTS = [os.environ.get('HOSTNAME'),
                 'localhost']
+
+host = os.environ.get('SITE_HOST')
+if host:
+    ALLOWED_HOSTS.append(host)
 
 
 # Application definition
@@ -87,7 +94,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 #     }
 # }
 
-DATABASES = {'default': dj_database_url.parse("postgres://ngnezzuepgeyah:e5a4a26195d1f0595555ed71085bc3081d4391cb707fdc674c85beda284202a0@ec2-46-137-84-140.eu-west-1.compute.amazonaws.com:5432/dfsbb0nokji39v")}
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
