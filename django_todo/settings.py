@@ -27,7 +27,8 @@ SECRET_KEY = '0rpl@d5$q#g&-*n8y)8vs*l_s1@okki=&+=j@e17w3p@$3*mgj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://kika-django-todo.herokuapp.com/',
+                'https://8000-e3063a1f-31d3-41e9-b494-d2fedb31d579.ws-eu01.gitpod.io/']
 
 
 # Application definition
