@@ -1,3 +1,5 @@
 import os
 
-os.environ['SECRET_KEY'] = '0rpl@d5$q#g&-*n8y)8vs*l_s1@okki=&+=j@e17w3p@$3*mgj'
+DEVELOPMENT=1
+
+os.environ['SECRET_KEY'] = 'b(4jhvu3jq*$bia&7r%hu&=po60ve(--z22^!zjwd0_aly&f$l'
